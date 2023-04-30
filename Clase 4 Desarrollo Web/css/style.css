@@ -1,0 +1,66 @@
+.barra{
+    text-align: right;
+    padding: 0;
+    background-color: gray;
+    background: rgb(227,225,255);
+    background: linear-gradient(90deg, rgba(227,225,255,1) 13%, rgba(36,221,195,1) 52%, rgba(0,212,255,1) 98%); 
+}
+a{
+    text-decoration: none;
+}
+h1, h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/** Utilidades**/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.header__texto{
+    text-align: center;
+}
+.medio{
+    text-align: center;
+    padding-top: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu1{
+    padding-left: 3%;
+}
+.menu2 .menu3{
+    text-align: left;
+    margin-top: 30rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.cuerpodepagina{
+    text-align: center;
+    margin-top: 5rem;
+}
+.cuerpodepagina2{
+    text-align: center;
+}
+.footer{
+    margin-top: 23.7rem;
+}
+
+.fondobody{
+    background: rgb(227,225,255);
+    background: linear-gradient(90deg, rgba(227,225,255,1) 13%, rgba(36,221,195,1) 52%, rgba(0,212,255,1) 98%);   
+}
