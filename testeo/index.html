@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de Validación</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario de Validación</h2>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required pattern="^.{6,}\s.+">
+        <small class="form-text text-muted">Debe tener más de 6 letras y al menos un espacio entre medio.</small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <small class="form-text text-muted">Debe tener un formato de email válido.</small>
+      </div>
+      <div class="form-group">
+        <label for="contrasenia">Contraseña:</label>
+        <input type="password" class="form-control" id="contrasenia" name="contrasenia" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+        <small class="form-text text-muted">Al menos 8 caracteres, formados por letras y números.</small>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" class="form-control" id="edad" name="edad" required min="18">
+        <small class="form-text text-muted">Número entero mayor o igual a 18.</small>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" required pattern="^[0-9]{7,}$">
+        <small class="form-text text-muted">Número de al menos 7 dígitos, no aceptar espacios, guiones ni paréntesis.</small>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" required pattern="^.{5,}\s.+">
+        <small class="form-text text-muted">Al menos 5 caracteres, con letras, números y un espacio en el medio.</small>
+      </div>
+      <div class="form-group">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" class="form-control" id="ciudad" name="ciudad" required minlength="3">
+        <small class="form-text text-muted">Al menos 3 caracteres.</small>
+      </div>
+      <div class="form-group">
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" required minlength="3">
+        <small class="form-text text-muted">Al menos 3 caracteres.</small>
+      </div>
+      <div class="form-group">
+        <label for="dni">DNI:</label>
+        <input type="text" class="form-control" id="dni" name="dni" required pattern="^\d{7,8}$">
+        <small class="form-text text-muted">Número de 7 u 8 dígitos.</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (this.checkValidity()) {
+        alert("El formulario es valido");
+      } else {
+        alert("Por favor, completa correctamente todos los campos");
+      }
+    });
+  </script>
+</body>
+</html>
